@@ -36,3 +36,96 @@
   }
 }
 /*  End Slider  */
+
+/*  Start Services  */
+.services{
+  .service-box{
+    float:$float-left;
+    width:(100%/3);
+    &:not(:last-of-type){
+      padding-right:20px;
+    }
+
+    .service-title{
+      color:#666;
+      text-align: center;
+      i{
+
+        font-size:35px;
+        position:relative;
+        top:4px;
+      }
+    }
+    .service-desc{
+      color:#777;
+      line-height: 1.5;
+    }
+    .link{
+      color:$redColor;
+      text-decoration: none;
+    }
+
+  }
+}
+
+/*  End Services  */
+
+/*  Start Players  */
+.our-players{
+  .player-box{
+    float:$float-left;
+    width:(100%/5);
+    &:not(:last-of-type){
+      padding-right:20px;
+    }
+    &:last-of-type {
+      max-width: calc(20% - 20px);
+    }
+
+    //&:in(:last-of-type){
+    //  max-width: calc(20% - 20px);
+    //}
+
+    .player-img{
+      max-width:100%;
+    }
+    .player-title{
+      color:#666;
+      font-weight:normal;
+      span {
+        font-weight:bold;
+      }
+      i{
+        font-size:35px;
+        position:relative;
+        top:4px;
+      }
+    }
+    .player-desc{
+      color:#777;
+      line-height: 1.5;
+    }
+    .link{
+      color:$redColor;
+      text-decoration: none;
+    }
+
+  }
+}
+/*  End Players  */
+
+/*  Start Lorem Ipsum  */
+  .lorem-ipsum{
+    .lorem-box{
+      float:$float-left;
+      width:(94%/3);
+      &:not(:last-of-type){
+          margin-right:3%;
+      }
+      .lorem-img{
+        max-width: 100%;
+      }
+    }
+  }
+/*  End Lorem Ipsum  */
+
