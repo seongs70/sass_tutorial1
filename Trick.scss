@@ -1,0 +1,88 @@
+@mixin opacity($value){
+  zoom:1;
+  $opacity-ie:$value * 100;
+  filter:alpha(opacity = $opacity-ie);
+  opacity:value;
+}
+
+
+@mixin transition($args...){
+  -webkit-transition:$args;
+  -moz-transition:$args;
+  -o-transition:$args;
+  transition:$args;
+}
+
+
+
+.element{
+  @include opacity(.9);
+  @include transition(all .3s ease-in-out);
+  color: #ff0000 + #008800;
+}
+
+
+
+
+
+
+
+
+
+
+.element{
+  .child{
+    font:{
+      weight:bold;
+      size:20px;
+      family:Arial;
+    }
+    border:{
+      right:1px solid #ccc;
+      left:1px solid #ddd;
+    }
+    padding:{
+      left:10px;
+      right:10px;
+    }
+  }
+}
+
+
+
+
+
+.error{
+  color:red;
+  font-weight:bold;
+}
+
+.element{
+  @extend .error;
+  font-size:20px;
+}
+
+
+
+
+%error{
+  color:red;
+  font-weight:bold;
+}
+
+.element{
+  @extend %error;
+  font-size:20px;
+}
+
+
+
+
+%background-cover{
+  -webkit-background-size:cover;
+}
+
+.element{
+  @extend %background-cover;
+  font-size:20px;
+}
