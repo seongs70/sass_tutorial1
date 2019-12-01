@@ -40,17 +40,29 @@
 /*  Start Services  */
 .services{
   .service-box{
-    float:$float-left;
-    width:(100%/3);
-    &:not(:last-of-type){
-      padding-right:20px;
+    @media #{$minMedium}{
+      float:$float-left;
+      width:(100%/3);
+      &:not(:last-of-type){
+        padding-right:20px;
+      }
     }
-
+    @media #{$maxMobile}{
+      i{
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
     .service-title{
       color:#666;
       text-align: center;
+      @media #{$maxSmall}{
+        text-align:left;
+      }
+      @media #{$maxMobile}{
+        text-align:center;
+      }
       i{
-
         font-size:35px;
         position:relative;
         top:4px;
@@ -73,19 +85,29 @@
 /*  Start Players  */
 .our-players{
   .player-box{
-    float:$float-left;
-    width:(100%/5);
-    &:not(:last-of-type){
+    //&:not(:last-of-type){
+
+    //}
+    @media #{$minSmall} {
+      float:$float-left;
+      width:(100%/2);
+      text-align: center;
+      margin-bottom:40px;
+    }
+    @media #{$minMedium} {
+      width:(100%/3);
+      text-align: $text-left;
+      margin-bottom:40px;
+      padding-left:20px;
       padding-right:20px;
     }
-    &:last-of-type {
-      max-width: calc(20% - 20px);
+    @media #{$minLarge} {
+      width:(100%/5);
+
     }
+    @media #{$maxMobile} {
 
-    //&:in(:last-of-type){
-    //  max-width: calc(20% - 20px);
-    //}
-
+    }
     .player-img{
       max-width:100%;
     }

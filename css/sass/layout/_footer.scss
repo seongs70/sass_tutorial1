@@ -8,20 +8,35 @@
     float:$float-left;
   }
   .gallery {
-    width:50%;
+    @media #{$minSmall}{
+      width:100%;
+    }
+    @media #{$minMedium}{
+      width:50%;
+    }
+    @media #{$maxMobile}{
+      width:100%;
+    }
+
     .img-box {
       overflow:hidden;
       margin-bottom:20px;
       img {
-        float:$float-left;
+       @media #{$minSmall}{
+         float:$float-left;
+       }
         width:150px;
         height:150px;
       }
       .text {
-        float:$float-left;
-        margin-right:15px;
-        margin-left:15px;
-        width:calc(100% - 180px);
+        @media #{$minSmall}{
+          float:$float-left;
+          margin-right:15px;
+          margin-left:15px;
+          width:calc(100% - 180px);
+        }
+
+
         h4 {
           color:$redColor;
           margin:20px 0 0px;
@@ -35,7 +50,12 @@
     }
   }
   .info {
-    width:25%;
+    @media #{$minSmall}{
+      width:50%;
+    }
+    @media #{$minMedium}{
+      width:25%;
+    }
     ul{
       color:#888;
       line-height:1.8;
@@ -56,12 +76,17 @@
     }
   }
   .contact{
-    width:25%;
+    @media #{$minSmall}{
+      width:50%;
+    }
+    @media #{$minMedium}{
+      width:25%;
+    }
     input[type="text"],
     input[type="email"],
     textarea {
-      border:1px solid #888;
-      border:1px solid #c9c9c9;
+      //border:1px solid #888;
+      //border:1px solid #c9c9c9;
       padding:10px;
       margin-bottom:5px;
       border-radius: 10px;
@@ -80,6 +105,7 @@
     border-top:1px solid #c5c5c5;
     overflow:hidden;
     color:#888;
+    margin-top:30px;
     .text, .author{
       width:50%;
       float:$float-left;

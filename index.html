@@ -17,6 +17,11 @@
             <div class="logo">
                 <h1>Composition</h1>
                 <p>Sass Website Tutorial</p>
+                <button class="the-toggler">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
             <ul class="navbar">
                 <li><a href="#">Hompage</a></li>
@@ -51,17 +56,17 @@
             <div class="head-with-border">
                 <h2>Our Services</h2>
             </div>
-            <div class="service-box">
+            <div class="service-box text-center-xs">
                 <h3 class="service-title"><i class="fa fa-home">Testing Title</i></h3>
                 <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magni nulla odit? Ab accusamus ad consequuntur corporis ea eaque earum eius eligendi error eveniet exercitationem facere fuga impedit in incidunt inventore itaque iure magni maiores natus necessitatibus, nihil praesentium quibusdam quod rem sequi soluta, sunt veniam voluptate voluptatum! Eum, exercitationem!</p>
                 <a class="link" href="#">Read More..</a>
             </div>
-            <div class="service-box">
+            <div class="service-box text-center-xs">
                 <h3 class="service-title"><i class="fa fa-users">Testing Title</i></h3>
                 <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magni nulla odit? Ab accusamus ad consequuntur corporis ea eaque earum eius eligendi error eveniet exercitationem facere fuga impedit in incidunt inventore itaque iure magni maiores natus necessitatibus, nihil praesentium quibusdam quod rem sequi soluta, sunt veniam voluptate voluptatum! Eum, exercitationem!</p>
                 <a class="link" href="#">Read More..</a>
             </div>
-            <div class="service-box">
+            <div class="service-box text-center-xs">
                 <h3 class="service-title"><i class="fa fa-gear">Testing Title</i></h3>
                 <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magni nulla odit? Ab accusamus ad consequuntur corporis ea eaque earum eius eligendi error eveniet exercitationem facere fuga impedit in incidunt inventore itaque iure magni maiores natus necessitatibus, nihil praesentium quibusdam quod rem sequi soluta, sunt veniam voluptate voluptatum! Eum, exercitationem!</p>
                 <a class="link" href="#">Read More..</a>
@@ -76,38 +81,37 @@
             <div class="head-with-border">
                 <h2>Our Players</h2>
             </div>
-            <div style="width:1190px;">
-                <div class="player-box">
+                <div class="player-box text-center-xs">
                     <img class="player-img" src="http://placehold.it/300x200/DDD" alt="">
                     <h3 class="player-title"><span>Name:</span> Osama Elzero</h3>
                     <p class="player-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magni nulla odit? Ab accusamus ad consequuntur corporis ea eaque earum</p>
                     <a class="link" href="#">Read More..</a>
                 </div>
-                <div class="player-box">
+                <div class="player-box text-center-xs">
                     <img class="player-img" src="http://placehold.it/300x200/DDD" alt="">
                     <h3 class="player-title"><span>Name:</span> Osama Elzero</h3>
                     <p class="player-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magni nulla odit? Ab accusamus ad consequuntur corporis ea eaque earum</p>
                     <a class="link" href="#">Read More..</a>
                 </div>
-                <div class="player-box">
+                <div class="player-box text-center-xs">
                     <img class="player-img" src="http://placehold.it/300x200/DDD" alt="">
                     <h3 class="player-title"><span>Name:</span> Osama Elzero</h3>
                     <p class="player-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magni nulla odit? Ab accusamus ad consequuntur corporis ea eaque earum</p>
                     <a class="link" href="#">Read More..</a>
                 </div>
-                <div class="player-box">
+                <div class="player-box text-center-xs">
                     <img class="player-img" src="http://placehold.it/300x200/DDD" alt="">
                     <h3 class="player-title"><span>Name:</span> Osama Elzero</h3>
                     <p class="player-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magni nulla odit? Ab accusamus ad consequuntur corporis ea eaque earum</p>
                     <a class="link" href="#">Read More..</a>
                 </div>
-                <div class="player-box">
+                <div class="player-box text-center-xs">
                     <img class="player-img" src="http://placehold.it/300x200/DDD" alt="">
                     <h3 class="player-title"><span>Name:</span> Osama Elzero</h3>
                     <p class="player-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magni nulla odit? Ab accusamus ad consequuntur corporis ea eaque earum</p>
                     <a class="link" href="#">Read More..</a>
                 </div>
-            </div>
+
             <div class="clearfix"></div>
         </div>
     </div>
@@ -136,7 +140,7 @@
     <!--  Start footer  -->
     <div class="footer">
         <div class="container">
-            <div class="gallery">
+            <div class="gallery text-center-xs">
                 <h3 class="section-title">Latest From Blog</h3>
                 <div class="img-box">
                     <img src="http://placehold.it/150x180/DDD" alt="">
@@ -177,12 +181,20 @@
                 </form>
             </div>
             <div class="clearfix"></div>
-            <div class="copyright">
+            <div cl1ass="copyright">
                 <div class="text">All Right Reseverd &copy; 2019</div>
                 <div class="author">Designed by ksh</div>
             </div>
         </div>
     </div>
     <!--  End footer  -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.the-toggler').on('click', function(){
+                $('.navbar').slideToggle();
+            });
+        });
+    </script>
 </body>
 </html>
